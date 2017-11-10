@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1014128039201",
+    "firebase_url": "https://flopusneo.firebaseio.com",
+    "project_id": "flopusneo",
+    "storage_bucket": "flopusneo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014128039201:android:396baa5a898695a8",
+        "android_client_info": {
+          "package_name": "com.fulcrumww.opusNeoTwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014128039201-jfi0d5d4nj0nsbpk15junnv2rgaeji7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn3H3NSm26qWJd8qhyFg8gsfjjjXMYGf0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

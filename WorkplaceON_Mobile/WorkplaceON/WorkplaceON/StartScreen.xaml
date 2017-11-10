@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="splash.png"
+             x:Class="WorkplaceON.StartScreen">
+    <ContentPage.Content >
+      
+        <StackLayout >
+            <Label Text="Hello!"
+                   VerticalOptions="Start" 
+                   FontSize="40"
+                   Margin="20,40,0,0"
+                   TextColor="White"
+                   LineBreakMode="WordWrap"
+                   HorizontalOptions="StartAndExpand" />
+            
+            <Label Text="Please Login to"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="StartAndExpand"
+                   XAlign="Start"
+                   FontSize="26"
+                   Margin="20,10,0,0"
+                   TextColor="White"
+                   LineBreakMode="WordWrap"
+                   />
+            <Label Text="MearsConnect"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="StartAndExpand"
+                   XAlign="Start"
+                   FontSize="26"
+                   Margin="20,10,0,0"
+                   TextColor="White"
+                   LineBreakMode="WordWrap"
+                   />
+
+            <Button Text="Start" Margin="50,20,50,20" HorizontalOptions="FillAndExpand"  VerticalOptions="EndAndExpand" Clicked="onStartButtonClick" ></Button>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

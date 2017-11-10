@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr–namespace:WorkplaceON.Controls;assembly=WorkplaceON"             
+    xmlns:controls="clr-namespace:WorkplaceON.Controls;assembly=WorkplaceON"
+    BackgroundImage="splash.png"
+    x:Class="WorkplaceON.Modules.Login.Views.LoginPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="1" Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Margin="20,5,0,0">
+                    <Label Text="Log in"
+                            VerticalOptions="Start" 
+                            FontSize="40"
+                            Margin="0,0,0,0"
+                            TextColor="White"
+                            LineBreakMode="WordWrap"
+                            HorizontalOptions="StartAndExpand" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Orientation="Vertical" Margin="0,50,0,0">
+                <StackLayout Orientation="Vertical" Margin="40,50">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="40">
+                        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Start" HeightRequest="40" Padding="3,10,0,0">
+                            <Image Source="ic_username.png" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand" Padding="3,3,0,0">
+                            <controls:DCEntry Text="{Binding UserName, Mode=TwoWay}" TextColor="Gray" Placeholder="Username" HeightRequest="40" PlaceholderColor="Gray" Keyboard="Email" FontSize="18"  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,30,0,0" HeightRequest="40" VerticalOptions="EndAndExpand" BackgroundColor="White">
+                        <StackLayout HorizontalOptions="Start" Padding="3,12,0,0">
+                            <Image Source="ic_password.png" VerticalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand" Padding="3,3,0,0">
+                            <controls:DCEntry Text="{Binding Password, Mode=TwoWay}" TextColor="Gray" Placeholder="Password" HeightRequest="40" PlaceholderColor="Gray" IsPassword="True" FontSize="18"  VerticalOptions="EndAndExpand" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand" Padding="3,3,0,0">
+                        </StackLayout>
+                    </StackLayout>
+                    <Label Text ="{Binding ErrorText}" TextColor="White" HeightRequest="40" IsVisible="{Binding IsError}" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Start"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Orientation="Vertical" VerticalOptions="EndAndExpand">
+                <StackLayout Orientation="Vertical" Margin="40,20">
+                    <ActivityIndicator x:Name="activityIndicator" Color="Red" IsEnabled="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsRunning="true" />
+                    <Button  Margin="0,10" Text="Log in" Command="{Binding submitButtonCommand}" FontSize="18" HorizontalOptions="FillAndExpand"  VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="splash.png"
+             xmlns:local="clr-namespace:FormsPinView.PCL;assembly=FormsPinView.PCL"
+             x:Class="WorkplaceON.Modules.Login.Views.PinAuthPage">
+    <ContentPage.Content>
+        <local:PinView
+         Title="Create a PIN"
+         HorizontalOptions="CenterAndExpand"
+         VerticalOptions="CenterAndExpand"
+        BindingContext="{Binding PinViewModel}" />
+    </ContentPage.Content>
+</ContentPage>

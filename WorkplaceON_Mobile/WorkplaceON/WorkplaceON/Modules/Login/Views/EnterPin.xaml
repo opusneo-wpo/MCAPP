@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="splash.png"
+             xmlns:local="clr-namespace:FormsPinView.PCL;assembly=FormsPinView.PCL"
+             x:Class="WorkplaceON.Modules.Login.Views.EnterPin">
+    <ContentPage.Content>
+        <local:PinView
+         Title="Enter PIN"
+         HorizontalOptions="CenterAndExpand"
+         VerticalOptions="CenterAndExpand"
+        BindingContext="{Binding PinViewModel}">
+        <!--<StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" Margin="40,20">
+            <ActivityIndicator x:Name="activityIndicator" Color="Red" IsEnabled="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsRunning="true" />                
+        </StackLayout>-->
+        </local:PinView>
+        
+    </ContentPage.Content>
+</ContentPage>

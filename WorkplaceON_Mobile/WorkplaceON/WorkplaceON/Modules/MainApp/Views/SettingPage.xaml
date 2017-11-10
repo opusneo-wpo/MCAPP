@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:WorkplaceON.Modules.MainApp.Views;assembly=WorkplaceON"
+             x:Class="WorkplaceON.Modules.MainApp.Views.SettingPage"
+             BackgroundImage="splash.png"
+             Title="Setting">
+
+  <StackLayout>
+    <Label Text="{Binding UserName}"
+           VerticalOptions="Start"
+           FontSize="40"
+           Margin="30,40,0,0"
+           TextColor="White"
+           LineBreakMode="WordWrap"
+           HorizontalOptions="StartAndExpand" />
+    <StackLayout Orientation="Vertical" Margin="40,50">
+      <StackLayout Orientation="Horizontal" Margin="0,30,0,0"  VerticalOptions="EndAndExpand">
+        <StackLayout HorizontalOptions="Start">
+          <Image Source="ic_status.png" VerticalOptions="End"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="StartAndExpand">
+          <Label Text="Reset Password" TextColor="White" HeightRequest="40" FontSize="23"  VerticalOptions="EndAndExpand" HorizontalTextAlignment="End"/>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" Margin="0,25,0,0"  VerticalOptions="EndAndExpand">
+        <StackLayout HorizontalOptions="Start">
+          <Image Source="ic_status.png" VerticalOptions="End"/>  
+        </StackLayout>
+        <StackLayout HorizontalOptions="StartAndExpand">          
+            <Label Text="Log Out" TextColor="White" HeightRequest="40" FontSize="23"  VerticalOptions="EndAndExpand" HorizontalTextAlignment="End">
+              <Label.GestureRecognizers>
+                <TapGestureRecognizer  
+                  Tapped="onLogoutButtonClick"
+                  NumberOfTapsRequired="1"/>
+              </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+  
+</pages:BaseContentPage>

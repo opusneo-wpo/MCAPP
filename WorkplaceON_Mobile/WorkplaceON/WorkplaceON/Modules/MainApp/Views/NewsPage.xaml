@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:WorkplaceON.Modules.MainApp.Views;assembly=WorkplaceON"
+             x:Class="WorkplaceON.Modules.MainApp.Views.NewsPage"
+             Title="News">
+
+  <!--<WebView Source="http://biz.workplaceon.com/wpo/app.nsf/menuItem.xsp#!mobilenews">
+  </WebView>-->
+  <StackLayout Orientation="Vertical"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+
+    <WebView x:Name="newsWebView"  VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Navigating="webOnNavigating" Navigated="webOnEndNavigating">
+    </WebView>
+    <ActivityIndicator IsRunning="true"  BackgroundColor="Transparent" x:Name="activity_indicator" Color="Red" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+  </StackLayout>
+</pages:BaseContentPage>
